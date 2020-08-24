@@ -8,11 +8,11 @@
 
 @interface RNRecallscreen : NSObject <RCTBridgeModule>
 
-- (void)catreButtonTT:(BOOL *)iscate;
+- (void)catreButtonTT:(BOOL)iscate;
 
 - (void)startRecord:(RCTResponseSenderBlock)callback;
 
-- (void)stopRecord:(BOOL *)isShow callback:(RCTResponseSenderBlock)callback;
+- (void)stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callback;
 
 @end
   

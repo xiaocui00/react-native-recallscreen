@@ -17,37 +17,44 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(catreButtonTT:(BOOL *)iscate) {
+RCT_EXPORT_METHOD(catreButtonTT:(BOOL)iscate) {
 
-  FJReplayKit *replaykit = [[FJReplayKit alloc] init];
+  FJReplayKit *replaykit = [FJReplayKit sharedReplay];
 //  NSLog(@"ios log finishDic %@",finishDic);
-    [replaykit catreButton:iscate]
+    [replaykit catreButton:iscate];
 }
 
 RCT_EXPORT_METHOD(startRecord:(RCTResponseSenderBlock)callback) {
-
-  FJReplayKit *replaykit = [[FJReplayKit alloc] init];
+    self.callback = callback;
+    __weak RNRecallscreen *weakself = self;
+  FJReplayKit *replaykit = [FJReplayKit sharedReplay];
 //  NSLog(@"ios log finishDic %@",finishDic);
-    callback(@[replaykit startRecordSuccess])
+    [replaykit startRecordSuccess:^(NSString *data) {
+        weakself.callback(@[@{@"data":data}]);
+        weakself.callback = nil;
+    } AndFaild:^(NSString *erro) {
+        weakself.callback(@[@{@"data":erro}]);
+        weakself.callback = nil;
+    }];
 }
 
-RCT_EXPORT_METHOD(stopRecord:(BOOL *)isShow callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callback) {
   self.callback = callback;
   __weak RNRecallscreen *weakself = self;
 
-  FJReplayKit *replaykit = [[FJReplayKit alloc] init];
+  FJReplayKit *replaykit = [FJReplayKit sharedReplay];
 
-  [replaykit stopRecordAndShowVideoPreviewController:isShow Success:(SuccessHomeBlock finishDic) {
+  [replaykit stopRecordAndShowVideoPreviewController:isShow Success:^(NSString *finishDic) {
 
 //            NSString *data = [finishDic data];
             NSLog(@"ios log finishDic %@",finishDic);
 
-            weakself.callback(@[[NSNull null], @{@"data":finishDic}]);
+            weakself.callback(@[@{@"data":finishDic}]);
             weakself.callback = nil;
 
-        } AndFaild:(FaildHomeBlock errorType) {
+        } AndFaild:^(NSString *errorType) {
 
-            weakself.callback(@[[NSNull null], @{}]);
+            weakself.callback(@[@{}]);
             weakself.callback = nil;
 
         }];
