@@ -2,9 +2,6 @@
 #import "RNRecallscreen.h"
 #import <FJRePlay/FJRePlayKit.h>
 
-#define ERROR_CLEANUP_ERROR_KEY @"E_ERROR_WHILE_CLEANING_FILES"
-#define ERROR_CLEANUP_ERROR_MSG @"Error while cleaning up tmp files"
-
 @interface RNRecallscreen ()
 
 @property (nonatomic, copy) RCTResponseSenderBlock callback;
