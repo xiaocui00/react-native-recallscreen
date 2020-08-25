@@ -8,9 +8,13 @@
 		<data>
 		ocEMLHSK5OXsle+ab2cuLEM5yFs=
 		</data>
+		<key>Headers/FJReplayKit.h</key>
+		<data>
+		jr9LqSriEDgwExoBkuhemht+5YE=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		Ddr91ljNrkEqDzdZf1hLvzOJCWY=
+		SOVqpXMN1/BjyKCIBPpN9QsLD6Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -28,6 +32,17 @@
 			<key>hash2</key>
 			<data>
 			7g1qq94RR6MGekokPM5HLIMSa/4RrvrRxj5eb3KomB8=
+			</data>
+		</dict>
+		<key>Headers/FJReplayKit.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jr9LqSriEDgwExoBkuhemht+5YE=
+			</data>
+			<key>hash2</key>
+			<data>
+			yXqkly1qmiayJm8u4O4wR6pWXvFu9ez1ZQKZyJrlNuE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
