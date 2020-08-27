@@ -43,18 +43,17 @@ RCT_EXPORT_METHOD(stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callb
   __weak RNRecallscreen *weakself = self;
 
   FJReplayKit *replaykit = [FJReplayKit sharedReplay];
-
+    
   [replaykit stopRecordAndShowVideoPreviewController:isShow Success:^(NSString *finishDic) {
 
 //            NSString *data = [finishDic data];
-            NSLog(@"ios log finishDic %@",finishDic);
+//            NSLog(@"ios log finishDic %@",finishDic);
 
             weakself.callback(@[@{@"data":finishDic}]);
             weakself.callback = nil;
 
         } AndFaild:^(NSString *errorType) {
-
-            weakself.callback(@[@{}]);
+            weakself.callback(@[@{@"data":errorType}]);
             weakself.callback = nil;
 
         }];

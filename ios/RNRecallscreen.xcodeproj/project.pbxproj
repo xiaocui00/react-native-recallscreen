@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B13D9EE24F3A884001BB82B /* FJRePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13D9ED24F3A884001BB82B /* FJRePlay.framework */; };
-		7B13D9EF24F3A8B9001BB82B /* RNRecallscreen.h in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNRecallscreen.h */; };
+		7BBD957124F4E0F200173039 /* RNRecallscreen.h in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNRecallscreen.h */; };
+		7BBD957224F4E24B00173039 /* RNRecallscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNRecallscreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,7 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B13D9EF24F3A8B9001BB82B /* RNRecallscreen.h in Sources */,
+				7BBD957224F4E24B00173039 /* RNRecallscreen.m in Sources */,
+				7BBD957124F4E0F200173039 /* RNRecallscreen.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
