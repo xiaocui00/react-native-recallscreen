@@ -1,6 +1,0 @@
-framework module FJRePlay {
-  umbrella header "FJRePlay.h"
-
-  export *
-  module * { export * }
-}

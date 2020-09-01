@@ -1,6 +1,6 @@
 
 #import "RNRecallscreen.h"
-#import <FJRePlay/FJRePlayKit.h>
+#import <FJRePlayKitDemo/FJRePlayKit.h>
 
 @interface RNRecallscreen ()
 
@@ -44,15 +44,40 @@ RCT_EXPORT_METHOD(stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callb
 
   FJReplayKit *replaykit = [FJReplayKit sharedReplay];
     
+    NSLog(@"ios log finishDic");
   [replaykit stopRecordAndShowVideoPreviewController:isShow Success:^(NSString *finishDic) {
 
 //            NSString *data = [finishDic data];
-//            NSLog(@"ios log finishDic %@",finishDic);
+            NSLog(@"ios log finishDic %@",finishDic);
 
             weakself.callback(@[@{@"data":finishDic}]);
             weakself.callback = nil;
 
         } AndFaild:^(NSString *errorType) {
+            NSLog(@"ios log errorType %@",errorType);
+            weakself.callback(@[@{@"data":errorType}]);
+            weakself.callback = nil;
+
+        }];
+}
+
+RCT_EXPORT_METHOD(uploadRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback) {
+  self.callback = callback;
+  __weak RNRecallscreen *weakself = self;
+
+  FJReplayKit *replaykit = [FJReplayKit sharedReplay];
+
+    NSLog(@"ios log uploadRecord");
+  [replaykit update:fileName Success:^(NSString *finishDic) {
+
+//            NSString *data = [finishDic data];
+            NSLog(@"ios log finishDic %@",finishDic);
+
+            weakself.callback(@[@{@"data":finishDic}]);
+            weakself.callback = nil;
+
+        } AndFaild:^(NSString *errorType) {
+            NSLog(@"ios log errorType %@",errorType);
             weakself.callback(@[@{@"data":errorType}]);
             weakself.callback = nil;
 

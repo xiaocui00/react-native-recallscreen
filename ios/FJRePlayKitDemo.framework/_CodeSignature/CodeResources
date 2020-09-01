@@ -4,56 +4,56 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/FJRePlay.h</key>
+		<key>Headers/FJRePlayKitDemo.h</key>
 		<data>
-		ocEMLHSK5OXsle+ab2cuLEM5yFs=
+		7uhGwq9nXaSOf5IEmIOhYy2styw=
 		</data>
 		<key>Headers/FJReplayKit.h</key>
 		<data>
-		jr9LqSriEDgwExoBkuhemht+5YE=
+		ztd+dcKxXJG+vVGJwgexf8ddywA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SOVqpXMN1/BjyKCIBPpN9QsLD6Y=
+		7GhWVY0htu6bv2i5iw/wfEA0wbE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		HKCqlASjFWaQohANbXnC2neh9Bk=
+		JnS0BNZd6mOl+Mp0w4voblckg/M=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/FJRePlay.h</key>
+		<key>Headers/FJRePlayKitDemo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ocEMLHSK5OXsle+ab2cuLEM5yFs=
+			7uhGwq9nXaSOf5IEmIOhYy2styw=
 			</data>
 			<key>hash2</key>
 			<data>
-			7g1qq94RR6MGekokPM5HLIMSa/4RrvrRxj5eb3KomB8=
+			1iCxND8cojBPlvf99Nq6j6W998Ein8NgRe6j+9zBlHk=
 			</data>
 		</dict>
 		<key>Headers/FJReplayKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jr9LqSriEDgwExoBkuhemht+5YE=
+			ztd+dcKxXJG+vVGJwgexf8ddywA=
 			</data>
 			<key>hash2</key>
 			<data>
-			yXqkly1qmiayJm8u4O4wR6pWXvFu9ez1ZQKZyJrlNuE=
+			e4mrSNV4ERItNKz5QbC1611NPBlmXVdoscBbRoNslos=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HKCqlASjFWaQohANbXnC2neh9Bk=
+			JnS0BNZd6mOl+Mp0w4voblckg/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			aj2Q+p9m5aSwoM6y2wDBLDZoO5Jbjo8vyedegbXv+Ck=
+			jqgmOURqS866pSYWJWwuQyWhte9eQERIlczHbvlb+JY=
 			</data>
 		</dict>
 	</dict>

@@ -14,5 +14,7 @@
 
 - (void)stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callback;
 
+- (void)uploadRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback;
+
 @end
   

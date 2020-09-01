@@ -1,0 +1,6 @@
+framework module FJRePlayKitDemo {
+  umbrella header "FJRePlayKitDemo.h"
+
+  export *
+  module * { export * }
+}

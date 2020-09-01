@@ -53,6 +53,23 @@ typedef void (^FaildHomeBlock)(NSString *erro);//失败block
  
  */
 -(void)catreButton:(BOOL)iscate;
+///**
+// *  开始录制
+// */
+//-(BOOL)startRecord;
+
+/**
+ *  结束录制
+ *  isShow是否录制完后自动展示视频预览页
+ */
+//-(void)stopRecordAndShowVideoPreviewController:(BOOL)isShow;
+
+-(void)stopRecord;
+
+-(void)startRecord11;
+
+
+
 /**
  *  开始录制
  */
@@ -63,4 +80,6 @@ typedef void (^FaildHomeBlock)(NSString *erro);//失败block
  *  isShow是否录制完后自动展示视频预览页
  */
 -(void)stopRecordAndShowVideoPreviewController:(BOOL)isShow Success:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
+
+-(void)update:(NSString *)name Success:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
 @end
