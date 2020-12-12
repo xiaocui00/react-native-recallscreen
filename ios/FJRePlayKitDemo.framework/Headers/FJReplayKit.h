@@ -73,7 +73,7 @@ typedef void (^FaildHomeBlock)(NSString *erro);//失败block
 /**
  *  开始录制
  */
--(void)startRecordSuccess:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;;
+-(void)startupdate:(NSString *)name RecordSuccess:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
 
 /**
  *  结束录制
@@ -81,5 +81,5 @@ typedef void (^FaildHomeBlock)(NSString *erro);//失败block
  */
 -(void)stopRecordAndShowVideoPreviewController:(BOOL)isShow Success:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
 
--(void)update:(NSString *)name Success:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
+-(void)update:(NSString *)name videoinfo:(NSString *)videoinfo Success:(SuccessHomeBlock)success AndFaild:(FaildHomeBlock)fild;
 @end

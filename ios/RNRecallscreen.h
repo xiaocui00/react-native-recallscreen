@@ -10,11 +10,11 @@
 
 - (void)catreButtonTT:(BOOL)iscate;
 
-- (void)startRecord:(RCTResponseSenderBlock)callback;
+- (void)startRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback;
 
 - (void)stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callback;
 
-- (void)uploadRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback;
+- (void)uploadRecord:(NSString *)fileName videoinfo:(NSString *)videoinfo callback:(RCTResponseSenderBlock)callback;
 
 @end
   

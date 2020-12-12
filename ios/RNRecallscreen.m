@@ -24,12 +24,12 @@ RCT_EXPORT_METHOD(catreButtonTT:(BOOL)iscate) {
     [replaykit catreButton:iscate];
 }
 
-RCT_EXPORT_METHOD(startRecord:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(startRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback) {
     self.callback = callback;
     __weak RNRecallscreen *weakself = self;
   FJReplayKit *replaykit = [FJReplayKit sharedReplay];
 //  NSLog(@"ios log finishDic %@",finishDic);
-    [replaykit startRecordSuccess:^(NSString *data) {
+    [replaykit startupdate:fileName RecordSuccess:^(NSString *data) {
         weakself.callback(@[@{@"data":data}]);
         weakself.callback = nil;
     } AndFaild:^(NSString *erro) {
@@ -61,23 +61,23 @@ RCT_EXPORT_METHOD(stopRecord:(BOOL)isShow callback:(RCTResponseSenderBlock)callb
         }];
 }
 
-RCT_EXPORT_METHOD(uploadRecord:(NSString *)fileName callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(uploadRecord:(NSString *)fileName videoinfo:(NSString *)videoinfo callback:(RCTResponseSenderBlock)callback) {
   self.callback = callback;
   __weak RNRecallscreen *weakself = self;
 
   FJReplayKit *replaykit = [FJReplayKit sharedReplay];
 
     NSLog(@"ios log uploadRecord");
-  [replaykit update:fileName Success:^(NSString *finishDic) {
+  [replaykit update:fileName videoinfo:videoinfo Success:^(NSString *finishDic) {
 
 //            NSString *data = [finishDic data];
-            NSLog(@"ios log finishDic %@",finishDic);
+            NSLog(@"ios log uploadRecord finishDic %@",finishDic);
 
             weakself.callback(@[@{@"data":finishDic}]);
             weakself.callback = nil;
 
         } AndFaild:^(NSString *errorType) {
-            NSLog(@"ios log errorType %@",errorType);
+            NSLog(@"ios log uploadRecord errorType %@",errorType);
             weakself.callback(@[@{@"data":errorType}]);
             weakself.callback = nil;
 
